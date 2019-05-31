@@ -13,7 +13,7 @@
 <style lang="scss">
 html, body {
   box-sizing: border-box;
-  word-break: keep-all;
+  word-break: break-all;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   width: 100%;
   height: 100%;
@@ -22,7 +22,6 @@ html, body {
 }
 
 .container {
-  width: 100%;
   max-width: 700px;
   margin: 0 auto;
   margin-bottom: 1rem;

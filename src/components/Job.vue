@@ -41,6 +41,8 @@ export default {
   padding: 1rem;
   text-decoration: none;
   color: black;
+  word-break: break-all;
+  width: 100%;
 }
 .job-item:hover {
   text-decoration: underline;
