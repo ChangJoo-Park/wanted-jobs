@@ -2,8 +2,8 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">프론트엔드</router-link> |
-      <router-link to="/android">안드로이드</router-link> |
-      <router-link to="/ios">아이폰</router-link> |
+      <router-link :to="{ name: 'android' }">안드로이드</router-link> |
+      <router-link :to="{ name: 'ios' }">아이폰</router-link> |
       <router-link to="/about">소개</router-link>
     </div>
     <router-view/>
