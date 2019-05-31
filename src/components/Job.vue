@@ -4,8 +4,10 @@
     <div>
       <span v-for="(tag, index) in item.tags" :key="index">{{ tag.title }}&nbsp;</span>
     </div>
-    <div v-html="item.detail.requirements"></div>
-    <div v-html="item.detail.preferred_points"></div>
+    <h3>자격요건</h3>
+    <div style="white-space: pre;" v-html="item.detail.requirements"></div>
+    <h3>우대사항</h3>
+    <div style="white-space: pre;" v-html="item.detail.preferred_points"></div>
   </div>
 </template>
 
