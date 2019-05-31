@@ -1,5 +1,7 @@
 # wanted-jobs
 
+취업은 리액트 (_ _)
+
 ## Project setup
 ```
 npm install
