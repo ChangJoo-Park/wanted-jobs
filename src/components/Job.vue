@@ -1,19 +1,20 @@
 <template>
-  <div>
-    <h1>{{ item.company.name}}</h1>
-    <div>
-      <span v-for="(tag, index) in item.tags" :key="index">{{ tag.title }}&nbsp;</span>
+  <a :href="`https://www.wanted.co.kr/wd/${item.id}`" target="_blank" class="job-item">
+    <h1>{{ item.company.name}} <small>- {{ item.address.location }}</small></h1>
+    <div v-if="details">
+      <div>
+        <span v-for="(tag, index) in item.tags" :key="index">{{ tag.title }}&nbsp;</span>
+      </div>
+      <h4>소개</h4>
+      <div style="white-space: pre-wrap;" v-html="item.detail.intro"></div>
+      <h4>자격요건</h4>
+      <div style="white-space: pre-wrap;" v-html="item.detail.requirements"></div>
+      <h4>우대사항</h4>
+      <div style="white-space: pre-wrap;" v-html="item.detail.preferred_points"></div>
+      <h4>혜택 및 복지</h4>
+      <div style="white-space: pre-wrap;" v-html="item.detail.benefits"></div>
     </div>
-    <h3>소개</h3>
-    <div style="white-space: pre;" v-html="item.detail.intro"></div>
-    <h3>자격요건</h3>
-    <div style="white-space: pre;" v-html="item.detail.requirements"></div>
-    <h3>우대사항</h3>
-    <div style="white-space: pre;" v-html="item.detail.preferred_points"></div>
-    <h3>혜택 및 복지</h3>
-    <div style="white-space: pre;" v-html="item.detail.benefits"></div>
-    <a :href="`https://www.wanted.co.kr/wd/${item.id}`" target="_blank">원티드에서 보기</a>
-  </div>
+  </a>
 </template>
 
 <script>
@@ -22,11 +23,26 @@ export default {
     item: {
       type: Object,
       required: true
+    },
+    details: {
+      type: Boolean,
+      required: false,
+      default: () => false
     }
   }
 }
 </script>
 
 <style>
-
+.job-item {
+  display: block;
+  border: 1px solid black;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  text-decoration: none;
+  color: black;
+}
+.job-item:hover {
+  text-decoration: underline;
+}
 </style>
