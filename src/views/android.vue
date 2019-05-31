@@ -1,16 +1,17 @@
 <template>
   <div class="home">
-    프론트엔드
+    Android
     <listing :jobs="jobs" />
   </div>
 </template>
 
 <script>
-import jobs from '../data/frontendjobs.json'
+import jobs from '../data/androidjobs.json'
 import Listing from '@/components/Listing.vue'
 
+console.log(jobs)
 export default {
-  name: 'home',
+  name: 'android',
   components: {
     Listing
   },

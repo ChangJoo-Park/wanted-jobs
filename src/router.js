@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
+import android from './views/android.vue'
+import ios from './views/ios.vue'
 
 Vue.use(Router)
 
@@ -12,6 +14,16 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home
+    },
+    {
+      path: '/android',
+      name: 'android',
+      component: android
+    },
+    {
+      path: '/ios',
+      name: 'ios',
+      component: ios
     },
     {
       path: '/about',
